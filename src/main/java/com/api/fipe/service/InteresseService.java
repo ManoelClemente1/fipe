@@ -1,6 +1,6 @@
 package com.api.fipe.service;
 
-import com.api.fipe.model.Interesse;
+import com.api.fipe.model.InteresseModel;
 import com.api.fipe.repository.InteresseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,11 +14,11 @@ public class InteresseService {
     private InteresseRepository repository;
 
     public void criarNovoInteresse(String nome){
-        Interesse interesse = new Interesse(nome);
-        repository.save(interesse);
+        InteresseModel interesseModel = new InteresseModel(nome);
+        repository.save(interesseModel);
     }
 
-    public List<Interesse> buscarListaDeInteresses(){
+    public List<InteresseModel> buscarListaDeInteresses(){
         return repository.findAll();
     }
 

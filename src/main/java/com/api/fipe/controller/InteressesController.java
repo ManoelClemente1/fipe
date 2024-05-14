@@ -1,6 +1,6 @@
 package com.api.fipe.controller;
 
-import com.api.fipe.model.Interesse;
+import com.api.fipe.model.InteresseModel;
 import com.api.fipe.service.InteresseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +15,7 @@ public class InteressesController {
     private InteresseService service;
 
     @GetMapping
-    public List<Interesse> buscarInteresses(){
+    public List<InteresseModel> buscarInteresses(){
         return service.buscarListaDeInteresses();
     }
 

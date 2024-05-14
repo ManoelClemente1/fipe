@@ -2,25 +2,23 @@ package com.api.fipe.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Table
 @Data
 @NoArgsConstructor
-public class Interesse {
+public class CategoriaModel {
 
     @Id
     @SequenceGenerator(
-            name="interesse_sequence",
-            sequenceName = "interesse_sequence",
+            name="categoria_sequence",
+            sequenceName = "categoria_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "interesse_generator"
+            generator = "categoria_generator"
     )
     private Long id;
 
@@ -28,7 +26,7 @@ public class Interesse {
 
     private Boolean status;
 
-    public Interesse(String nome) {
+    public CategoriaModel(String nome) {
         this.nome = nome;
         this.status = true;
     }
