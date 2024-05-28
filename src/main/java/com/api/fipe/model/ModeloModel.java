@@ -8,17 +8,17 @@ import lombok.NoArgsConstructor;
 @Table
 @Data
 @NoArgsConstructor
-public class MarcaModel {
+public class ModeloModel {
 
     @Id
     @SequenceGenerator(
-            name="marca_sequence",
-            sequenceName = "marca_sequence",
+            name="modelo_sequence",
+            sequenceName = "modelo_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "marca_generator"
+            generator = "modelo_generator"
     )
     private Long id;
 
@@ -27,12 +27,12 @@ public class MarcaModel {
     private Boolean status;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_categoria", referencedColumnName = "id")
-    private CategoriaModel categoriaModel;
+    @JoinColumn(name = "id_marca", referencedColumnName = "id")
+    private MarcaModel marcaModel;
 
-    public MarcaModel(String nome, CategoriaModel categoriaModel) {
+    public ModeloModel(String nome, MarcaModel marcaModel) {
         this.nome = nome;
-        this.categoriaModel = categoriaModel;
+        this.marcaModel = marcaModel;
         this.status = true;
     }
 
