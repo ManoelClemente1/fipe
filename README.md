@@ -4,7 +4,7 @@ This is the README file for the `fipe` project.
 
 ## Description
 
-The `fipe` project is a software application that gets the latest and more accurate fipe price cars information. It provides functionality to add, update, and delete employee records, as well as view cars details and enable export the data to a file in the root of the project.
+The `fipe` project is a software api that gets the latest and more accurate fipe price cars information. It provides functionality to add, update, and delete fipe records, as well as view cars details.
 
 ## Stack
 
@@ -25,7 +25,7 @@ To install and run the `fipe` project, follow these steps:
 
 ## Usage
 ```
-Once the program is running, you can access it by opening Insominia or using HTTPie in terminal.
+Once the api is running, you can access it by opening Insominia or using HTTPie in terminal.
 To use Insominia, download it from: https://insomnia.rest/
 To use HTTPie, download it from: https://httpie.io/cli
 ```
@@ -35,12 +35,12 @@ To use HTTPie, download it from: https://httpie.io/cli
 #### Return all employees
 
 ```http
-  http :8080/employee/all
+  http :8080/api/categorias
 ```
 
 | Parâmetro   | Descrição                           |
 | :---------- | :---------------------------------- |
-| `GET` | Return all employees|
+| `GET` | Return all cars categories|
 
 #### Add an employee
 
